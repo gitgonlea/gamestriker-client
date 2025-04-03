@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-jersey: 'Jersey_10', sans-serif;
+  }
+  
+  body {
+    @apply m-0 text-white;
+    font-family: var(--font-roboto);
+  }
+  
+  a {
+    @apply no-underline text-inherit;
+  }
+  
+  input:focus, 
+  select:focus, 
+  textarea:focus {
+    @apply outline-none ring-2 ring-sky-300;
+  }
+}
+
+@layer components {
+  .text-shadow {
+    text-shadow: 1px 1px 0px #000000;
+  }
+  
+  .font-jersey {
+    font-family: var(--font-jersey);
+  }
+  
+  .nav-section {
+    @apply w-px h-10 bg-gray-400 mx-2;
+  }
+}
+
+@layer utilities {
+  .transition-slow {
+    transition-duration: 300ms;
+  }
+}
